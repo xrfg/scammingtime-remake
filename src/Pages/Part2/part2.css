@@ -1,0 +1,89 @@
+.page {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+.textBig {
+  z-index: 10;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  pointer-events: none;
+}
+
+.textSmall {
+  z-index: 10;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  pointer-events: none;
+}
+
+/** images under */
+
+.imagesUnderContainer {
+  position: relative;
+  width: 100vw;
+  text-align: center;
+}
+
+.imagesUnder {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: auto;
+}
+
+.tvNewsContainer {
+  height: 5vw;
+  z-index: 100;
+}
+
+.green {
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.tvNews {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 85s linear infinite;
+  padding-left: 101%;
+  font-size: 1.4vw;
+  padding-top: 0.9vw;
+  color: hotpink;
+  cursor: grabbing;
+}
+/* * global classes? */
+.portalBg {
+  width: 100%;
+  height: 100vh;
+  max-height: 70vw;
+  text-align: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.portalGlow {
+  margin: 0;
+  /* opacity: 0; to implement later with gsap to appear */
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

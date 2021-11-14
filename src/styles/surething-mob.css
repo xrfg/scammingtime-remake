@@ -1,0 +1,122 @@
+@font-face {
+  font-family: round;
+  src: url(../assets/fonts/ArialRoundedBold.ttf);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: round;
+  font-size: 1.6rem;
+  background-color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  cursor: pointer;
+}
+.nav {
+  width: 10vh;
+  position: fixed;
+  right: 2rem;
+  top: 4rem;
+  z-index: 1000;
+}
+.nav img {
+  margin-top: -2.9vh;
+  opacity: 0.4;
+  cursor: pointer;
+  transform: translateZ(0);
+  transform: rotate(0);
+  border: 1px solid transparent;
+  transition: opacity 0.3s;
+}
+.nav img.active,
+.nav img:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.nav img.active:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.nav img:hover ~ img.active {
+  opacity: 0.1;
+  transition: opacity 0.3s;
+}
+#p1 {
+  z-index: 30;
+}
+#p2 {
+  z-index: 20;
+}
+#p3 {
+  z-index: 10;
+}
+.txt {
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  width: 100vh;
+  position: absolute;
+  transform: translateZ(0);
+  pointer-events: none;
+  text-align: center;
+}
+.txt.pt1 {
+  height: 470vh;
+}
+.txt.pt2 {
+  height: 497vh;
+}
+.txt.pt3 {
+  height: 570vh;
+}
+.txt.multiply {
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+.layed {
+  text-align: center;
+  padding: 0;
+  width: 100vh;
+  position: relative;
+  z-index: 10;
+}
+.bgimg,
+.white,
+.txt img {
+  position: relative;
+  display: block;
+  font-size: 0px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+.portal {
+  width: 100%;
+  height: 100vw;
+  max-height: 70vh;
+  text-align: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.portalglow {
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1000;
+}

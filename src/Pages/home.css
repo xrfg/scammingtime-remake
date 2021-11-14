@@ -1,0 +1,97 @@
+/* body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+} */
+
+.fornow {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.cube {
+  transform-style: preserve-3d;
+  animation: spin 20s infinite alternate ease-out;
+  position: relative;
+  width: 15vw;
+  height: 15vh;
+  top: 50%;
+  left: 50%;
+  margin-left: -7.5vw;
+  margin-top: -7.5vh;
+  display: block;
+}
+.cube div {
+  width: 15vw;
+  height: 15vh;
+  line-height: 15vh;
+  text-align: center;
+  background-color: lightgray;
+  display: block;
+  position: absolute;
+  opacity: 0.8;
+  display: block;
+  border-radius: 4px;
+  animation: glow 1s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+
+.imgcube {
+  object-fit: cover;
+  height: 15vh;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .cube {
+    zoom: 1.4;
+  }
+}
+
+.cube div.front {
+  transform: translateZ(15vw);
+  background-color: hotpink;
+}
+
+.cube div.back {
+  transform: translateZ(-15vw);
+  background-color: rgb(51, 255, 0);
+}
+
+.cube div.middle {
+  transform: translateX(15vw) rotateY(90deg);
+  background-color: rgb(4, 0, 255);
+}
+
+.cube div.cover {
+  transform: translateX(-15vw) rotateY(90deg);
+  background-color: rgb(4, 0, 255);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(-20deg) rotateY(20deg);
+  }
+  100% {
+    transform: rotateX(-20deg) rotateY(740deg);
+  }
+}
+@keyframes glow {
+  from {
+    appearance: none;
+    box-shadow: inset 0 0 10px white, 0 0 20px white, 0 0 30px lightsalmon,
+      0 0 40px lightsalmon, 0 0 50px lightsalmon, 0 0 60px lightsalmon,
+      0 0 70px lightsalmon;
+  }
+  to {
+    appearance: none;
+    box-shadow: inset 0 0 20px white, 0 0 30px lavender, 0 0 40px lavender,
+      0 0 50px lavender, 0 0 60px lavender, 0 0 70px lavender, 0 0 80px lavender;
+  }
+}
